@@ -10,7 +10,7 @@ export class DrawerContentScreen extends Component {
     }
 
     handlerLogout(){
-        console.log("Logout");
+        this.props.onLogout();
     }
 
     render(){
@@ -28,6 +28,11 @@ export class DrawerContentScreen extends Component {
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
                             label="Info"
                             onPress={() => this.props.navigation.navigate("Info")}
+                        />
+                        <DrawerItem 
+                            icon={() => <Icon type="material-community" name="bomb" style={styles.icon}/>}
+                            label="Consulta"
+                            onPress={() => this.props.navigation.navigate("Consulta")}
                         />
                     </View>
                 </DrawerContentScrollView>
